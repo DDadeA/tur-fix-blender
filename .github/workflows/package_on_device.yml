@@ -72,6 +72,9 @@ jobs:
     - name: Merge repos
       run: ./setup-environment.sh
 
+    - name: Check duplicate package recipes
+      run: bash ./common-files/check-duplicate-package-recipes.sh
+
     - name: Gather build summary
       id: build-info
       env:
